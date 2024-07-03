@@ -1,9 +1,11 @@
 "use client";
 
-import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
 import { useEffect, useState } from "react";
+
+import "swiper/css/bundle";
+import { Slide } from "@/components/Slide";
 
 export default function Home() {
   const [showText, setShowText] = useState(false);
@@ -14,7 +16,7 @@ export default function Home() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowText(true);
-    }, 2500); // 2.5秒後に表示
+    }, 1500); // 2.5秒後に表示
 
     return () => clearTimeout(timer); // クリーンアップタイマー
   }, []);
@@ -57,7 +59,26 @@ export default function Home() {
           )}
         </motion.div>
       </header>
-      <div className="h-[1000px]"></div>
+      <div className="h-[1000px]">
+        <div>
+          <div className="flex mx-12 gap-5 mt-8">
+            <div className="border-l-[10px] border-gray-400"></div>
+            <h2 className="text-4xl font-semibold text-black/80">
+              <Typewriter
+                words={["Smart Pocket"]}
+                cursor
+                cursorStyle="_"
+                typeSpeed={70}
+                deleteSpeed={50}
+                delaySpeed={1000}
+              />
+            </h2>
+          </div>
+          <div className="mt-4">
+            <Slide />
+          </div>
+        </div>
+      </div>
     </main>
   );
 }
