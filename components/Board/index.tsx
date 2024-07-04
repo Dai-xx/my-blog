@@ -6,8 +6,10 @@ type Prop = {
 
 export const Board: FC<Prop> = ({ children }) => {
   return (
-    <div className="w-[600px] h-96 rounded-3xl p-3 bg-gray-700/20 border border-gray-600/40">
-      {children}
+    <div className="w-full mx-auto aspect-[2/1] rounded-3xl p-1 backdrop-opacity-25 bg-white/20 border border-transparent bg-gradient-to-r from-cyan-500 to-blue-500">
+      <div className="bg-white rounded-[20px] w-full h-full p-5">
+        {children}
+      </div>
     </div>
   );
 };
