@@ -22,8 +22,8 @@ export const Board: React.FC<Prop> = ({ children }) => {
         transition: "opacity 0.5s ease-in-out, transform 0.5s ease-in-out",
       }}
     >
-      <div className="bg-white rounded-[20px] w-full h-full p-5 shadow-xl">
-        {children}
+      <div className="bg-white rounded-[20px] w-full h-full px-5 pt-5 shadow-xl overflow-hidden">
+        <div className="h-full w-full overflow-hidden">{children}</div>
       </div>
     </div>
   );
