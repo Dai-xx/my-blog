@@ -25,12 +25,12 @@ export const Slide: FC<Prop> = ({}) => {
     >
       <SwiperSlide>
         <Board>
-          <div className="relative ">
+          <div className="relative w-[150px] aspect-[390/844]">
             <Image
               src="/sorces/sm_01.png"
               alt=""
               fill
-              style={{ objectFit: "cover" }}
+              style={{ objectFit: "contain" }}
             />
           </div>
         </Board>
