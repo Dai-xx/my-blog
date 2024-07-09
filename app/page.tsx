@@ -5,11 +5,13 @@ import { Typewriter } from "react-simple-typewriter";
 import { useEffect, useState } from "react";
 
 import "swiper/css/bundle";
-import { Slide } from "@/components/Slide";
 import Loading from "./loading";
 import { useInView } from "react-intersection-observer";
 import { TypeTitle } from "@/components/TypeTitle";
 import { Header } from "@/components/Header";
+import { SmartPocket } from "@/components/Slide/SmartPocket";
+import { Dayshare } from "@/components/Slide/Dayshare";
+import { Others } from "@/components/Slide/Others";
 
 export default function Home() {
   const [showText, setShowText] = useState(false);
@@ -71,7 +73,7 @@ export default function Home() {
             <div>
               <TypeTitle text="Smart Pocket" />
               <div className="mt-4">
-                <Slide />
+                <SmartPocket />
               </div>
             </div>
           </section>
@@ -80,7 +82,7 @@ export default function Home() {
             <div>
               <TypeTitle text="Dayshare" />
               <div className="mt-4">
-                <Slide />
+                <Dayshare />
               </div>
             </div>
           </section>
@@ -89,7 +91,7 @@ export default function Home() {
             <div>
               <TypeTitle text="Others" />
               <div className="mt-4">
-                <Slide />
+                <Others />
               </div>
             </div>
           </section>
