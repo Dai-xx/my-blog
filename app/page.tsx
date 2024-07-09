@@ -45,7 +45,7 @@ export default function Home() {
           animate={{ opacity: 1 }}
           transition={{ duration: 4 }}
           style={{
-            backgroundImage: 'url("/sorces/blue.jpg")',
+            backgroundImage: 'url("/sources/blue.jpg")',
             backgroundSize: "cover",
             backgroundPosition: "center",
             height: "100vh",

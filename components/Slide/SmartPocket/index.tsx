@@ -9,13 +9,18 @@ export const SmartPocket: FC = () => {
       slides={[
         <Board key="slide1">
           {/* 1つ目のスライドの内容 */}
-          <div className="relative w-[150px] aspect-[390/844]">
-            <Image
-              src="/sources/sm_01.png"
-              alt=""
-              fill
-              style={{ objectFit: "contain" }}
-            />
+          <div className="grid grid-cols-2 place-items-center h-full">
+            <div className="relative w-[80%] aspect-[390/844] rounded-2xl border-2">
+              <Image
+                src="/sources/sm_01.jpg"
+                alt=""
+                fill
+                style={{ objectFit: "contain", borderRadius: "16px" }}
+              />
+            </div>
+            <div className="flex flex-col justify-start h-full">
+              <p className="text-3xl">デザインの実装</p>
+            </div>
           </div>
         </Board>,
         <Board key="slide2">
