@@ -29,4 +29,5 @@ body {
 
 p {
   color: hsl(210, 12%, 10%);
+  font-size: 16px;
 }
