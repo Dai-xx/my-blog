@@ -3,6 +3,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
 import { useEffect, useState } from "react";
+import { FaTrophy } from "react-icons/fa";
 
 import "swiper/css/bundle";
 import Loading from "./loading";
@@ -12,6 +13,7 @@ import { Header } from "@/components/Header";
 import { SmartPocket } from "@/components/Slide/SmartPocket";
 import { Dayshare } from "@/components/Slide/Dayshare";
 import { Others } from "@/components/Slide/Others";
+import { LECBLO } from "@/components/Slide/LECBLO";
 
 export default function Home() {
   const [showText, setShowText] = useState(false);
@@ -83,6 +85,19 @@ export default function Home() {
               <TypeTitle text="Dayshare" />
               <div className="mt-4">
                 <Dayshare />
+              </div>
+            </div>
+          </section>
+
+          <section className=" mt-48">
+            <div>
+              <div className="flex">
+                <TypeTitle text="LECBLO" />
+
+                <FaTrophy size={40} color="gold" />
+              </div>
+              <div className="mt-4">
+                <LECBLO />
               </div>
             </div>
           </section>

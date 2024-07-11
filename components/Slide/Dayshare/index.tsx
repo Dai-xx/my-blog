@@ -11,98 +11,91 @@ export const Dayshare: FC = () => {
         <Board key="slide1">
           {/* 1つ目のスライドの内容 */}
           {/* <div className="grid grid-cols-[1fr_auto] h-full"> */}
+          <div className="flex">
+            <div className="relative w-[75%] aspect-[8/5] rounded-2xl border-2">
+              <Image
+                src="/sources/ds_01.png"
+                alt=""
+                fill
+                style={{ objectFit: "contain", borderRadius: "16px" }}
+              />
+            </div>
 
-          <div className="relative w-[75%] aspect-[8/5] rounded-2xl border-2">
-            <Image
-              src="/sources/ds_01.png"
-              alt=""
-              fill
-              style={{ objectFit: "contain", borderRadius: "16px" }}
-            />
-          </div>
-
-          {/* <div className="flex flex-col justify-start h-full">
-              <div className="flex gap-3">
-                <div className="bg-gradient-to-b from-cyan-500 to-blue-500 w-2 h-full"></div>
-                <p className="text-3xl p-2 text-center font-medium">
-                  デザインの実装・修正
-                </p>
-              </div>
+            <div className="w-[25%] p-5">
+              <p>ホームページです。</p>
               <p className="mt-5">
-                デザインカンプを元に、コーディングを行います。
+                一日のスケジュールが円グラフによって直感的にわかりやすく表現されています。
               </p>
               <p className="mt-5">
-                月２のペースでデザイナーと通話でデザイン修正会を行います。
-              </p>
-              <p className="mt-5">
-                Tailwindcss, radix-ui, react-spring
-                などモダンなデザインライブラリを使用しています。
+                タグ、いいね、コメントの機能があり、ユーザー同士の交流が生まれやすい設計になっています。
               </p>
             </div>
-          </div> */}
+          </div>
         </Board>,
         <Board key="slide2">
-          {/* 2つ目のスライドの内容 */}
-          {/* <div className="grid grid-cols-2 place-items-center h-full"> */}
-          <div className="relative w-[75%] aspect-[8/5] rounded-2xl border-2">
-            <Image
-              src="/sources/ds_02.png"
-              alt=""
-              fill
-              style={{ objectFit: "contain", borderRadius: "16px" }}
-            />
-          </div>
-          {/* <div className="flex flex-col justify-start h-full">
-              <div className="flex gap-3">
-                <div className="bg-gradient-to-b from-cyan-500 to-blue-500 w-2 h-full"></div>
-                <p className="text-3xl p-2 text-center font-medium">
-                  BC情報の連携
-                </p>
-              </div>
+          <div className="flex">
+            <div className="relative w-[75%] aspect-[8/5] rounded-2xl border-2">
+              <Image
+                src="/sources/ds_02.png"
+                alt=""
+                fill
+                style={{ objectFit: "contain", borderRadius: "16px" }}
+              />
+            </div>
+
+            <div className="w-[25%] p-5">
+              <p>マイページです。</p>
               <p className="mt-5">
-                お客様のブロックチェーン情報を取得し、自動でデータを更新します。
-              </p>
-              <p className="mt-5">alchemyのapiを使用しています。</p>
-              <p className="mt-5">
-                スマコン開発経験があり、ブロックチェーンの基礎的な知識があります。
+                SNSによくある、
+                <ul className="my-5">
+                  <li>名前,id,プロフメッセージの修正</li>
+                  <li>本人投稿の取得</li>
+                </ul>
+                を行えます。
               </p>
             </div>
-          </div> */}
+          </div>
         </Board>,
         <Board key="slide3">
           {/* 3つ目のスライドの内容 */}
           {/* <div className="grid grid-cols-2 place-items-center h-full"> */}
-          <div className="relative w-[75%] aspect-[8/5] rounded-2xl border-2">
-            <Image
-              src="/sources/ds_03.png"
-              alt=""
-              fill
-              style={{ objectFit: "contain", borderRadius: "16px" }}
-            />
-          </div>
-          {/* <div className="flex flex-col justify-start h-full">
-              <div className="flex gap-3">
-                <div className="bg-gradient-to-b from-cyan-500 to-blue-500 w-2 h-full"></div>
-                <p className="text-3xl p-2 text-center font-medium">
-                  DB情報の連携
-                </p>
-              </div>
-              <p className="mt-5">
-                コラボプロジェクトのデータベース情報を取得し、自動でデータを更新します。
-              </p>
-              <p className="mt-5">Firebaseを使用しています。</p>
-              <p className="mt-5">Next.js上でapiの実装を行っています。</p>
+          <div className="flex">
+            <div className="relative w-[75%] aspect-[8/5] rounded-2xl border-2">
+              <Image
+                src="/sources/ds_03.png"
+                alt=""
+                fill
+                style={{ objectFit: "contain", borderRadius: "16px" }}
+              />
             </div>
-          </div> */}
+            <div className="w-[25%] p-5">
+              <p>ポスト画面です。</p>
+              <p className="mt-5">
+                入力されていない時間帯は灰色で染まるようになっています。
+              </p>
+              <p className="mt-5">
+                スペースで区切ることで、簡単に複数のタグを設定できます。
+              </p>
+            </div>
+          </div>
         </Board>,
         <Board key="slide4">
-          <div className="relative w-[75%] aspect-[8/5] rounded-2xl border-2">
-            <Image
-              src="/sources/ds_04.png"
-              alt=""
-              fill
-              style={{ objectFit: "contain", borderRadius: "16px" }}
-            />
+          <div className="flex">
+            <div className="relative w-[75%] aspect-[8/5] rounded-2xl border-2">
+              <Image
+                src="/sources/ds_04.png"
+                alt=""
+                fill
+                style={{ objectFit: "contain", borderRadius: "16px" }}
+              />
+            </div>
+            <div className="w-[25%] p-5">
+              <p>検索結果です。</p>
+              <p className="mt-5">ワード、タグによる検索を行えます。</p>
+              <p className="mt-5">
+                ユーザーがいち早く知りたい情報にたどり着くために欠かせない機能です。
+              </p>
+            </div>
           </div>
         </Board>,
         <Board key="slide5">

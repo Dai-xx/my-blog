@@ -5,32 +5,54 @@ import { Board } from "@/components/Layout/Board";
 
 export const Others: FC = () => {
   return (
-    <Slide
-      slides={[
-        <Board key="slide1">
-          {/* 1つ目のスライドの内容 */}
-          <div className="relative w-[150px] aspect-[390/844]">
-            <Image
-              src="/sources/sm_01.png"
-              alt=""
-              fill
-              style={{ objectFit: "contain" }}
-            />
-          </div>
-        </Board>,
-        <Board key="slide2">
-          {/* 2つ目のスライドの内容 */}
-          <div>Content for slide 2</div>
-        </Board>,
-        <Board key="slide3">
-          {/* 3つ目のスライドの内容 */}
-          <div>Content for slide 3</div>
-        </Board>,
-        <Board key="slide4">
-          {/* 4つ目のスライドの内容 */}
-          <div>Content for slide 4</div>
-        </Board>,
-      ]}
-    />
+    <>
+      <p className="mx-12">趣味で作成したことがある3Dモデリングと写真。</p>
+      <Slide
+        slides={[
+          <div key="slide1">
+            {/* 1つ目のスライドの内容 */}
+
+            <div className="relative w-[50%] aspect-[390/844]">
+              <Image
+                src="/sources/AT-AT01.png"
+                alt=""
+                fill
+                style={{ objectFit: "contain" }}
+              />
+            </div>
+          </div>,
+          <div key="slide2">
+            <div className="relative w-[50%] aspect-[390/844]">
+              <Image
+                src="/sources/power_house.png"
+                alt=""
+                fill
+                style={{ objectFit: "contain" }}
+              />
+            </div>
+          </div>,
+          <div key="slide3">
+            <div className="relative w-[50%] aspect-[390/844]">
+              <Image
+                src="/sources/nhao.jpeg"
+                alt=""
+                fill
+                style={{ objectFit: "contain" }}
+              />
+            </div>
+          </div>,
+          <div key="slide3">
+            <div className="relative w-[50%] aspect-[390/844]">
+              <Image
+                src="/sources/ajisai.JPG"
+                alt=""
+                fill
+                style={{ objectFit: "contain" }}
+              />
+            </div>
+          </div>,
+        ]}
+      />
+    </>
   );
 };
