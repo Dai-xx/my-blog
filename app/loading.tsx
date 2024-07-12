@@ -4,16 +4,18 @@ import { motion } from "framer-motion";
 
 export default function Loading() {
   return (
-    <motion.div
-      className="w-20 h-20 bg-blue-500 rounded-xl"
-      animate={{
-        scale: [1],
-        rotate: [0, 0, 360, 360],
-        transition: {
-          duration: 1,
-          repeat: Infinity,
-        },
-      }}
-    />
+    <div className="flex h-[100vh] w-[100vw] items-center bg-black">
+      <motion.div
+        className="mx-auto h-20 w-20 rounded-xl bg-blue-500"
+        animate={{
+          scale: [1],
+          rotate: [0, 0, 360, 360],
+          transition: {
+            duration: 1,
+            repeat: Infinity,
+          },
+        }}
+      />
+    </div>
   );
 }

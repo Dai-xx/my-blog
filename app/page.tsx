@@ -31,7 +31,7 @@ export default function Home() {
 
   if (!showText)
     return (
-      <div className="absolute top-1/2 left-1/2 -translate-x-[50%] -translate-y-[50%]">
+      <div className="absolute left-1/2 top-1/2 -translate-x-[50%] -translate-y-[50%]">
         <Loading />
       </div>
     );
@@ -41,11 +41,11 @@ export default function Home() {
       {/* <motion.div style={{ opacity }} className="z-50"></motion.div> */}
       <Header />
 
-      <header className="bg-black fixed top-0 w-full h-screen overflow-hidden">
+      <header className="fixed top-0 h-screen w-full overflow-hidden bg-black">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 4 }}
+          transition={{ duration: 8 }}
           style={{
             backgroundImage: 'url("/sources/blue.jpg")',
             backgroundSize: "cover",
@@ -55,7 +55,7 @@ export default function Home() {
           }}
         >
           {showText && (
-            <h1 className="text-[280px] font-semibold absolute bottom-10">
+            <h1 className="absolute bottom-1/2 text-[100px] font-extrabold md:bottom-10 md:text-[280px] md:font-semibold">
               <Typewriter
                 words={["Hello", "Hello, world!"]}
                 loop={1}
@@ -69,8 +69,8 @@ export default function Home() {
           )}
         </motion.div>
       </header>
-      <div className="mt-[100vh] mb-[100px]">
-        <div className="bg-white z-10 relative pb-20">
+      <div className="mb-[100px] mt-[100vh]">
+        <div className="relative z-10 bg-white pb-20">
           <section className="pt-20">
             <div>
               <TypeTitle text="Smart Pocket" />
@@ -80,7 +80,7 @@ export default function Home() {
             </div>
           </section>
 
-          <section className=" mt-48">
+          <section className="mt-48">
             <div>
               <TypeTitle text="Dayshare" />
               <div className="mt-4">
@@ -89,7 +89,7 @@ export default function Home() {
             </div>
           </section>
 
-          <section className=" mt-48">
+          <section className="mt-48">
             <div>
               <div className="flex">
                 <TypeTitle text="LECBLO" />
