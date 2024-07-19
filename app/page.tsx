@@ -12,7 +12,7 @@ import "@radix-ui/themes/styles.css";
 import { GallerySlide } from "@/components/Layout/GallerySlide";
 import { NFT } from "@/components/Slide/NFT";
 import "@radix-ui/themes/styles.css";
-import { Theme } from "@radix-ui/themes";
+import { Avatar, Theme } from "@radix-ui/themes";
 
 export default function Home() {
   const [showText, setShowText] = useState(false);
@@ -36,8 +36,8 @@ export default function Home() {
     );
 
   return (
-    <Theme>
-      <main className="h-screen w-full">
+    <Theme accentColor="blue">
+      <main className="h-screen w-full pt-5">
         {/* <Header /> */}
 
         {/* <header className="fixed top-0 h-screen w-full overflow-hidden">
@@ -69,7 +69,7 @@ export default function Home() {
             </motion.div>
             </header> */}
 
-        <div className="mx-auto max-w-5xl px-4 py-10">
+        <div className="mx-auto max-w-5xl px-4">
           <div className="grid grid-cols-2 grid-rows-2 place-items-start">
             <div className="">
               <Modal />
@@ -77,6 +77,10 @@ export default function Home() {
             <div className="">
               <NFT />
             </div>
+            <Avatar
+              src="https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?&w=256&h=256&q=70&crop=focalpoint&fp-x=0.5&fp-y=0.3&fp-z=1&fit=crop"
+              fallback="A"
+            />
           </div>
         </div>
       </main>
