@@ -97,7 +97,9 @@ export default function Home() {
                 <FaTrophy size={40} color="gold" />
               </div>
               <div className="mt-4">
-                <LECBLO />
+                <div className="mx-auto w-[700px]">
+                  <LECBLO />
+                </div>
               </div>
             </div>
           </section>

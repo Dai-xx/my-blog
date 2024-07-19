@@ -8,10 +8,10 @@ export const SmartPocket: FC = () => {
   return (
     <Slide
       slides={[
-        <Board key="slide1">
+        <div key="slide1">
           {/* 1つ目のスライドの内容 */}
-          <div className="grid grid-cols-2 place-items-center h-full">
-            <div className="relative w-[80%] aspect-[390/844] rounded-2xl border-2">
+          <div className="grid h-full grid-cols-2 place-items-center">
+            <div className="relative aspect-[390/844] w-[80%] rounded-2xl border-2">
               <Image
                 src="/sources/sm_01.jpg"
                 alt=""
@@ -19,10 +19,10 @@ export const SmartPocket: FC = () => {
                 style={{ objectFit: "contain", borderRadius: "16px" }}
               />
             </div>
-            <div className="flex flex-col justify-start h-full">
+            <div className="flex h-full flex-col justify-start">
               <div className="flex gap-3">
-                <div className="bg-gradient-to-b from-cyan-500 to-blue-500 w-2 h-full"></div>
-                <p className="text-3xl p-2 text-center font-medium">
+                <div className="h-full w-2 bg-gradient-to-b from-cyan-500 to-blue-500"></div>
+                <p className="p-2 text-center text-3xl font-medium">
                   デザインの実装・修正
                 </p>
               </div>
@@ -38,11 +38,11 @@ export const SmartPocket: FC = () => {
               </p>
             </div>
           </div>
-        </Board>,
-        <Board key="slide2">
+        </div>,
+        <div key="slide2">
           {/* 2つ目のスライドの内容 */}
-          <div className="grid grid-cols-2 place-items-center h-full">
-            <div className="relative w-[80%] aspect-[1/2] rounded-2xl border-2">
+          <div className="grid h-full grid-cols-2 place-items-center">
+            <div className="relative aspect-[1/2] w-[80%] rounded-2xl border-2">
               <Image
                 src="/sources/sm_02.png"
                 alt=""
@@ -50,10 +50,10 @@ export const SmartPocket: FC = () => {
                 style={{ objectFit: "contain", borderRadius: "16px" }}
               />
             </div>
-            <div className="flex flex-col justify-start h-full">
+            <div className="flex h-full flex-col justify-start">
               <div className="flex gap-3">
-                <div className="bg-gradient-to-b from-cyan-500 to-blue-500 w-2 h-full"></div>
-                <p className="text-3xl p-2 text-center font-medium">
+                <div className="h-full w-2 bg-gradient-to-b from-cyan-500 to-blue-500"></div>
+                <p className="p-2 text-center text-3xl font-medium">
                   BC情報の連携
                 </p>
               </div>
@@ -66,11 +66,11 @@ export const SmartPocket: FC = () => {
               </p>
             </div>
           </div>
-        </Board>,
-        <Board key="slide3">
+        </div>,
+        <div key="slide3">
           {/* 3つ目のスライドの内容 */}
-          <div className="grid grid-cols-2 place-items-center h-full">
-            <div className="relative w-[80%] aspect-[390/844] rounded-2xl border-2">
+          <div className="grid h-full grid-cols-2 place-items-center">
+            <div className="relative aspect-[390/844] w-[80%] rounded-2xl border-2">
               <Image
                 src="/sources/sm_03.png"
                 alt=""
@@ -78,10 +78,10 @@ export const SmartPocket: FC = () => {
                 style={{ objectFit: "contain", borderRadius: "16px" }}
               />
             </div>
-            <div className="flex flex-col justify-start h-full">
+            <div className="flex h-full flex-col justify-start">
               <div className="flex gap-3">
-                <div className="bg-gradient-to-b from-cyan-500 to-blue-500 w-2 h-full"></div>
-                <p className="text-3xl p-2 text-center font-medium">
+                <div className="h-full w-2 bg-gradient-to-b from-cyan-500 to-blue-500"></div>
+                <p className="p-2 text-center text-3xl font-medium">
                   DB情報の連携
                 </p>
               </div>
@@ -92,12 +92,12 @@ export const SmartPocket: FC = () => {
               <p className="mt-5">Next.js上でapiの実装を行っています。</p>
             </div>
           </div>
-        </Board>,
-        <Board key="slide4">
+        </div>,
+        <div key="slide4">
           {/* 4つ目のスライドの内容 */}
           <div className="flex justify-between gap-10">
             <div>
-              <div className="relative aspect-[511.56264/532.44842] w-[120px] mx-auto">
+              <div className="relative mx-auto aspect-[511.56264/532.44842] w-[120px]">
                 <Image
                   src="/sources/join.svg"
                   alt=""
@@ -112,7 +112,7 @@ export const SmartPocket: FC = () => {
               </p>
             </div>
             <div>
-              <div className="relative aspect-[511.56264/532.44842] w-[120px] mx-auto">
+              <div className="relative mx-auto aspect-[511.56264/532.44842] w-[120px]">
                 <Image
                   src="/sources/responsive.svg"
                   alt=""
@@ -141,7 +141,7 @@ export const SmartPocket: FC = () => {
               </p>
             </div>
             <div>
-              <div className="relative aspect-[511.56264/532.44842] w-[120px] mx-auto">
+              <div className="relative mx-auto aspect-[511.56264/532.44842] w-[120px]">
                 <Image
                   src="/sources/cat.svg"
                   alt=""
@@ -158,13 +158,13 @@ export const SmartPocket: FC = () => {
 
             <Link
               href={"https://www.smapocke.app/"}
-              className="border-b border-black hover:border-gray-500 hover:text-gray-500 bottom-5 absolute"
+              className="absolute bottom-5 border-b border-black hover:border-gray-500 hover:text-gray-500"
               target="blank"
             >
               Go to Smart Pocket →
             </Link>
           </div>
-        </Board>,
+        </div>,
       ]}
     />
   );
