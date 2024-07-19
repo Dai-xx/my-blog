@@ -9,9 +9,9 @@ type SlideProps = {
 
 export const Slide: FC<SlideProps> = ({ slides }) => {
   return (
-    <div className="mx-auto h-[500px] w-[700px] rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 p-2">
+    <div className="mx-auto h-[400px] w-[600px] rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500 p-2">
       <div className="flex h-full w-full items-center justify-center rounded-2xl bg-white">
-        <div className="h-[470px] w-[670px] rounded-2xl bg-white">
+        <div className="h-[370px] w-[570px] rounded-2xl bg-white">
           <Swiper
             modules={[Navigation, Pagination, A11y]}
             spaceBetween={50}

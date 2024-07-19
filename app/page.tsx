@@ -7,13 +7,12 @@ import { FaTrophy } from "react-icons/fa";
 
 import "swiper/css/bundle";
 import Loading from "./loading";
-import { useInView } from "react-intersection-observer";
-import { TypeTitle } from "@/components/TypeTitle";
-import { Header } from "@/components/Header";
-import { SmartPocket } from "@/components/Slide/SmartPocket";
-import { Dayshare } from "@/components/Slide/Dayshare";
-import { Others } from "@/components/Slide/Others";
-import { LECBLO } from "@/components/Slide/LECBLO";
+import { Modal } from "@/components/Modal";
+import "@radix-ui/themes/styles.css";
+import { GallerySlide } from "@/components/Layout/GallerySlide";
+import { NFT } from "@/components/Slide/NFT";
+import "@radix-ui/themes/styles.css";
+import { Theme } from "@radix-ui/themes";
 
 export default function Home() {
   const [showText, setShowText] = useState(false);
@@ -37,83 +36,50 @@ export default function Home() {
     );
 
   return (
-    <main className="">
-      {/* <motion.div style={{ opacity }} className="z-50"></motion.div> */}
-      <Header />
+    <Theme>
+      <main className="h-screen w-full">
+        {/* <Header /> */}
 
-      <header className="fixed top-0 h-screen w-full overflow-hidden bg-black">
+        {/* <header className="fixed top-0 h-screen w-full overflow-hidden">
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 8 }}
-          style={{
-            backgroundImage: 'url("/sources/blue.jpg")',
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            height: "100vh",
-            display: "relative",
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 8 }}
+        style={{
+          backgroundImage: 'url("/sources/blue.jpg")',
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          height: "100vh",
+          display: "relative",
           }}
-        >
+          >
           {showText && (
             <h1 className="absolute bottom-1/2 text-[100px] font-extrabold md:bottom-10 md:text-[280px] md:font-semibold">
-              <Typewriter
-                words={["Hello", "Hello, world!"]}
-                loop={1}
-                cursor
-                cursorStyle="_"
-                typeSpeed={70}
-                deleteSpeed={50}
-                delaySpeed={1000}
-              />
+            <Typewriter
+            words={["Hello", "Hello, world!"]}
+            loop={1}
+            cursor
+            cursorStyle="_"
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={1000}
+            />
             </h1>
-          )}
-        </motion.div>
-      </header>
-      <div className="mb-[100px] mt-[100vh]">
-        <div className="relative z-10 bg-white pb-20">
-          <section className="pt-20">
-            <div>
-              <TypeTitle text="Smart Pocket" />
-              <div className="mt-4">
-                <SmartPocket />
-              </div>
-            </div>
-          </section>
+            )}
+            </motion.div>
+            </header> */}
 
-          <section className="mt-48">
-            <div>
-              <TypeTitle text="Dayshare" />
-              <div className="mt-4">
-                <Dayshare />
-              </div>
+        <div className="mx-auto max-w-5xl px-4 py-10">
+          <div className="grid grid-cols-2 grid-rows-2 place-items-start">
+            <div className="">
+              <Modal />
             </div>
-          </section>
-
-          <section className="mt-48">
-            <div>
-              <div className="flex">
-                <TypeTitle text="LECBLO" />
-
-                <FaTrophy size={40} color="gold" />
-              </div>
-              <div className="mt-4">
-                <div className="mx-auto w-[700px]">
-                  <LECBLO />
-                </div>
-              </div>
+            <div className="">
+              <NFT />
             </div>
-          </section>
-
-          <section className="pt-48">
-            <div>
-              <TypeTitle text="Others" />
-              <div className="mt-4">
-                <Others />
-              </div>
-            </div>
-          </section>
+          </div>
         </div>
-      </div>
-    </main>
+      </main>
+    </Theme>
   );
 }
