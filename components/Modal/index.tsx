@@ -26,6 +26,7 @@ const projects = [
     src: "/sources/lb_logo.png",
     color: "",
     size: 100,
+    custom: "LECBLO",
   },
 ];
 
@@ -43,11 +44,16 @@ export const Modal = () => {
               onClick={() => setSelected(project.id)}
             >
               <div className="flex justify-center">
+                {project.custom && (
+                  <div className="absolute mt-3 text-2xl font-bold text-white">
+                    {project.custom}
+                  </div>
+                )}
                 <Image
                   src={project.src}
                   height={project.size}
                   width={project.size}
-                  alt="Smart Pocket"
+                  alt=""
                   style={{ objectFit: "cover" }}
                 />
               </div>
