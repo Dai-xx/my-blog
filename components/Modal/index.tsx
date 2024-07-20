@@ -4,6 +4,7 @@ import { SmartPocket } from "@/components/Slide/SmartPocket";
 import { Dayshare } from "@/components/Slide/Dayshare";
 import { LECBLO } from "@/components/Slide/LECBLO";
 import { Button, Dialog, Flex } from "@radix-ui/themes";
+import { useSwiper } from "swiper/react";
 
 const projects = [
   {
@@ -26,7 +27,7 @@ const projects = [
     src: "/sources/lb_logo.png",
     color: "",
     size: 100,
-    custom: "LECBLO",
+    custom: "RECBLO",
   },
 ];
 
@@ -40,7 +41,7 @@ export const Modal = () => {
           {projects.map((project) => (
             <button
               key={project.id}
-              className={`${project.color} h-28 w-40 rounded-xl bg-white/60 shadow-lg`}
+              className={`${project.color} h-28 w-40 rounded-xl bg-white/60 shadow-lg transition-transform hover:translate-y-1`}
               onClick={() => setSelected(project.id)}
             >
               <div className="flex justify-center">
@@ -62,24 +63,13 @@ export const Modal = () => {
         </div>
       </Dialog.Trigger>
 
-      <Dialog.Content maxWidth="700px">
+      <Dialog.Content size="4" maxWidth="700px">
         <Dialog.Title></Dialog.Title>
         <Dialog.Description size="2" mb="4"></Dialog.Description>
 
         {projects.map((project) => (
           <div key={project.id}>{selected === project.id && project.title}</div>
         ))}
-
-        <Flex gap="3" mt="4" justify="end">
-          <Dialog.Close>
-            <Button variant="soft" color="gray">
-              Cancel
-            </Button>
-          </Dialog.Close>
-          <Dialog.Close>
-            <Button>Save</Button>
-          </Dialog.Close>
-        </Flex>
       </Dialog.Content>
     </Dialog.Root>
   );

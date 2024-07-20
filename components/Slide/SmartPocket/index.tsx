@@ -3,8 +3,12 @@ import Image from "next/image";
 import { Slide } from "@/components/Layout/Slide";
 import { Board } from "@/components/Layout/Board";
 import Link from "next/link";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { useSwiper } from "swiper/react";
 
 export const SmartPocket: FC = () => {
+  const swiper = useSwiper();
+  console.log("swiper_in_children", swiper);
   return (
     <Slide
       slides={[
@@ -36,6 +40,9 @@ export const SmartPocket: FC = () => {
                 Tailwindcss, radix-ui, react-spring
                 などモダンなデザインライブラリを使用しています。
               </p>
+              <button onClick={() => swiper && swiper.slideNext()}>
+                Slide to the next slide
+              </button>
             </div>
           </div>
         </div>,

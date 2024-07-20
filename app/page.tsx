@@ -110,9 +110,14 @@ export default function Home() {
                 <SkilBox data={blockchain}>
                   ブロックチェーン関連の技術も触れます。
                 </SkilBox>
+                <div className="mt-2">
+                  <SkilBox data={["/Logos/Go-Logo.png"]}>
+                    バックエンドも絶賛勉強中です。
+                  </SkilBox>
+                </div>
                 <div className="mt-2"></div>
                 <SkilBox data={univ}>
-                  大学で使用している技術スタックです。
+                  大学ではCを用いてアルゴリズムを学んでいます。
                 </SkilBox>
               </div>
             </div>
