@@ -162,14 +162,14 @@ export const SmartPocket: FC = () => {
                 web3auth, alchemy。
               </p>
             </div>
-
+            {/* 
             <Link
               href={"https://www.smapocke.app/"}
               className="absolute bottom-5 border-b border-black hover:border-gray-500 hover:text-gray-500"
               target="blank"
             >
               Go to Smart Pocket →
-            </Link>
+            </Link> */}
           </div>
         </div>,
       ]}

@@ -1,29 +1,21 @@
-import React, { useState } from "react";
-import Image from "next/image";
-import { SmartPocket } from "@/components/Slide/SmartPocket";
-import { Dayshare } from "@/components/Slide/Dayshare";
-import { LECBLO } from "@/components/Slide/LECBLO";
-import { Button, Dialog, Flex } from "@radix-ui/themes";
-import { useSwiper } from "swiper/react";
-
 const projects = [
   {
     id: "sm",
-    title: <SmartPocket />,
+    compornent: <SmartPocket />,
     src: "/sources/sm_logo.png",
     color: "",
     size: 140,
   },
   {
     id: "ds",
-    title: <Dayshare />,
+    compornent: <Dayshare />,
     src: "/sources/ds_logo.png",
     color: "",
     size: 80,
   },
   {
     id: "lb",
-    title: <LECBLO />,
+    compornent: <LECBLO />,
     src: "/sources/lb_logo.png",
     color: "",
     size: 100,
@@ -31,12 +23,18 @@ const projects = [
   },
 ];
 
+import * as Dialog from "@radix-ui/react-dialog";
+import { SmartPocket } from "../Slide/SmartPocket";
+import { Dayshare } from "../Slide/Dayshare";
+import { LECBLO } from "../Slide/LECBLO";
+import { useState } from "react";
+import Image from "next/image";
+
 export const Modal = () => {
   const [selected, setSelected] = useState("");
-
   return (
     <Dialog.Root>
-      <Dialog.Trigger>
+      <Dialog.Trigger asChild>
         <div className="mx-auto grid w-[350px] grid-cols-2 gap-5">
           {projects.map((project) => (
             <button
@@ -62,15 +60,20 @@ export const Modal = () => {
           ))}
         </div>
       </Dialog.Trigger>
-
-      <Dialog.Content size="4" maxWidth="700px">
-        <Dialog.Title></Dialog.Title>
-        <Dialog.Description size="2" mb="4"></Dialog.Description>
-
-        {projects.map((project) => (
-          <div key={project.id}>{selected === project.id && project.title}</div>
-        ))}
-      </Dialog.Content>
+      <Dialog.Portal>
+        <Dialog.Overlay className="data-[state=open]:animate-overlayShow fixed inset-0 bg-black/50" />
+        <Dialog.Content className="data-[state=open]:animate-contentShow fixed left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] focus:outline-none">
+          <div className="mx-auto flex h-[500px] w-[700px] items-center justify-center rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500">
+            <div className="h-[485px] w-[685px] overflow-hidden rounded-2xl bg-white p-2">
+              {projects.map((project) => (
+                <div key={project.id}>
+                  {selected === project.id && project.compornent}
+                </div>
+              ))}
+            </div>
+          </div>
+        </Dialog.Content>
+      </Dialog.Portal>
     </Dialog.Root>
   );
 };
