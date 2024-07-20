@@ -10,7 +10,7 @@ const projects = [
     id: "sm",
     title: <SmartPocket />,
     src: "/sources/sm_logo.png",
-    color: "#f0f0f0",
+    color: "",
     size: 140,
   },
   {
@@ -35,11 +35,11 @@ export const Modal = () => {
   return (
     <Dialog.Root>
       <Dialog.Trigger>
-        <div className="grid w-[350px] grid-cols-2 gap-5">
+        <div className="mx-auto grid w-[350px] grid-cols-2 gap-5">
           {projects.map((project) => (
             <button
               key={project.id}
-              className={`h-28 w-40 rounded-xl bg-white`}
+              className={`${project.color} h-28 w-40 rounded-xl bg-white/60 shadow-lg`}
               onClick={() => setSelected(project.id)}
             >
               <div className="flex justify-center">

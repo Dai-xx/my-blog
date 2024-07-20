@@ -33,7 +33,7 @@ p {
 }
 
 .radix-themes {
-  --my-brand-color: linear-gradient(to right, #e0eaf3, #cfdef3);
+  --my-brand-color: linear-gradient(to right, #10ea38, #44be62);
   --color-background: var(--my-brand-color);
 }
 
@@ -48,4 +48,29 @@ p {
 
 .custom-bg {
   background: linear-gradient(90deg, #f7f7f7 0%, #f7f7f7 100%);
+}
+
+.grade-bg {
+  background-color: hsla(198, 84%, 52%, 0.83);
+  background-image: radial-gradient(
+      at 40% 20%,
+      hsla(28, 100%, 74%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 80% 0%, hsla(189, 100%, 56%, 1) 0px, transparent 50%),
+    radial-gradient(at 0% 50%, hsla(355, 100%, 93%, 1) 0px, transparent 50%),
+    radial-gradient(at 81% 44%, hsla(340, 100%, 76%, 1) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, hsla(22, 100%, 77%, 1) 0px, transparent 50%);
+}
+
+.orange-grade {
+  background-color: hsla(30, 72%, 50%, 1);
+  background-image: radial-gradient(
+      at 38% 22%,
+      hsla(31, 69%, 70%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 88% 80%, hsla(25, 70%, 69%, 0.58) 0px, transparent 50%),
+    radial-gradient(at 20% 53%, hsla(28, 74%, 70%, 0.23) 0px, transparent 50%),
+    radial-gradient(at 99% 97%, hsla(70, 95%, 70%, 1) 0px, transparent 50%);
 }
