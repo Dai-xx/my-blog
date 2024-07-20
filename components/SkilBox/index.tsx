@@ -2,14 +2,14 @@ import Image from "next/image";
 
 type Props = {
   data: string[];
-  text: string;
+  children: React.ReactNode;
 };
 
-export const SkilBox = ({ data, text }: Props) => {
+export const SkilBox = ({ data, children }: Props) => {
   return (
     <div className="flex">
-      <section className="rounded-l-xl bg-white/50 p-2">
-        <div className="grid grid-cols-3 gap-1">
+      <section className="flex items-center rounded-l-xl bg-white/50 p-2">
+        <div className="grid w-[128px] grid-cols-3 gap-1">
           {data.map((item, index) => {
             return (
               <div className="relative aspect-square w-10" key={index}>
@@ -24,8 +24,8 @@ export const SkilBox = ({ data, text }: Props) => {
           })}
         </div>
       </section>
-      <div className="rounded-r-xl border-gray-300 bg-white p-2">
-        <p>{text}</p>
+      <div className="w-[246px] rounded-r-xl border-gray-300 bg-white p-2">
+        <p>{children}</p>
       </div>
     </div>
   );

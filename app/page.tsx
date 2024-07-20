@@ -99,11 +99,24 @@ export default function Home() {
             <div className="mx-auto">
               <NFT />
             </div>
-            <div className="">
-              <SkilBox data={front} text="bbbbbb" />
-              <SkilBox data={blockchain} text="aaaaaa" />
-              <SkilBox data={univ} text="cccccc" />
+            <div className="flex h-full items-center">
+              <div>
+                <SkilBox data={front}>
+                  使用頻度が高い技術スタックです。
+                  <br />
+                  フルスタックで開発しています。
+                </SkilBox>
+                <div className="mt-2"></div>
+                <SkilBox data={blockchain}>
+                  ブロックチェーン関連の技術も触れます。
+                </SkilBox>
+                <div className="mt-2"></div>
+                <SkilBox data={univ}>
+                  大学で使用している技術スタックです。
+                </SkilBox>
+              </div>
             </div>
+            <div></div>
           </div>
         </div>
       </main>
