@@ -17,7 +17,7 @@ export const CardLayout: FC<Props> = ({ data }) => {
       {data.map((item, index) => (
         <section
           key={index}
-          className="flex h-full w-full flex-col items-center rounded-xl border-2 border-gray-300 p-2 shadow-lg"
+          className="flex h-full w-full flex-col items-center rounded-lg border-2 border-gray-300 p-2"
         >
           {item.src && (
             <div className="relative flex aspect-square w-[100px] items-center justify-center">

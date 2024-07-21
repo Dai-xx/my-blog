@@ -45,7 +45,7 @@ const data_4 = [
   },
   {
     src: "/sources/responsive.svg",
-    title: "Design",
+    title: "Description",
     text: "特定のNFTを所持する人に向けたポイントサイトの保守・運用を行っています。",
   },
   {
