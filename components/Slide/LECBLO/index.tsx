@@ -3,129 +3,126 @@ import Image from "next/image";
 import { Slide } from "@/components/Layout/Slide";
 import { Board } from "@/components/Layout/Board";
 import Link from "next/link";
+import { BoardInner } from "@/components/Layout/BoardInner";
+import { TbPlayerTrackNextFilled } from "react-icons/tb";
+import { Button, Code, Theme } from "@radix-ui/themes";
+import { CardLayout } from "@/components/Layout/CardLayout";
+import { MdCloudUpload, MdComment } from "react-icons/md";
+import { FaCirclePlay } from "react-icons/fa6";
+
+const feature_data = [
+  {
+    icon: <MdCloudUpload size={100} color="#CC99FF" />,
+    title: "Upload",
+    text: "mp3ファイルをアップロードすることができます。",
+  },
+  {
+    icon: <FaCirclePlay size={100} color="#0099FF" />,
+    title: "One Click Play",
+    text: "アップロードされた音楽をワンクリックで視聴できます。",
+  },
+  {
+    icon: <MdComment size={100} color="#FF9900" />,
+    title: "Comment",
+    text: "コメント機能があり、ユーザー同士の交流が生まれやすい設計になっています。",
+  },
+];
+
+const teches = ["Next.js", "React", "Typescript", "Firebase", "Vercel"];
+
+const data_tech = [
+  {
+    src: "/sources/join.svg",
+    title: "Join",
+    text: "4人チームでハッカソンに参加した時のプロダクトです。",
+  },
+  {
+    src: "/sources/responsive.svg",
+    title: "Description",
+    text: "短い音楽を共有できるサービスです。",
+  },
+  {
+    src: "/sources/hard.svg",
+    title: "Situation",
+    text: "約10時間というとてもハードな開発でした。　　アイデアと完成度が評価され、優勝できました。",
+  },
+  {
+    src: "/sources/cat.svg",
+    title: "Tech",
+    content: (
+      <div className="flex flex-wrap gap-1">
+        {teches.map((item: string, index) => (
+          <Code key={index}>{item}</Code>
+        ))}
+      </div>
+    ),
+  },
+];
 
 export const LECBLO: FC = () => {
   return (
-    <Slide
-      slides={[
-        <div key="slide1">
-          {/* 1つ目のスライドの内容 */}
-          {/* <div className="grid grid-cols-[1fr_auto] h-full"> */}
-          <div className="flex">
-            <div className="relative aspect-[8/5] w-[75%] rounded-2xl border-2">
-              <Image
-                src="/sources/lb_01.png"
-                alt=""
-                fill
-                style={{ objectFit: "contain", borderRadius: "16px" }}
-              />
-            </div>
-
-            <div className="w-[25%] p-5">
-              <p>ホームページです。</p>
-              <p className="mt-5">
-                再生ボタンを押すと、ワンクリックで音楽が再生されます。
-              </p>
-            </div>
-          </div>
-        </div>,
-        <div key="slide2">
-          <div className="flex">
-            <div className="relative aspect-[8/5] w-[75%] rounded-2xl border-2">
-              <Image
-                src="/sources/lb_02.png"
-                alt=""
-                fill
-                style={{ objectFit: "contain", borderRadius: "16px" }}
-              />
-            </div>
-
-            <div className="w-[25%] p-5">
-              <p>ログイン後に投稿できるようになります。</p>
-              <p className="mt-5"></p>
-            </div>
-          </div>
-        </div>,
-        <div key="slide2">
-          <div>
-            <Link
-              href={
-                "https://www.canva.com/design/DAGKOk31r2k/gbmg70BCkbGx_oh07MaiGw/edit?utm_content=DAGKOk31r2k&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
-              }
-              target="blank"
-              className="border-b border-black hover:border-gray-500 hover:text-gray-500"
-            >
-              紹介スライド (Canvaへ飛びます)
-            </Link>
-          </div>
-          <div className="flex justify-center">
-            <div className="relative aspect-[8/5] w-[75%] rounded-2xl">
-              <Image
-                src="/sources/lb_03.png"
-                alt=""
-                fill
-                style={{ objectFit: "contain" }}
-              />
-            </div>
-          </div>
-        </div>,
-
-        <div key="slide3">
-          {/* 4つ目のスライドの内容 */}
-          <div className="flex justify-between gap-10">
-            <div>
-              <div className="relative mx-auto aspect-[511.56264/532.44842] w-[120px]">
+    <Board>
+      <Slide
+        slides={[
+          <BoardInner key="slide1">
+            <div className="h-full">
+              <div className="relative h-full w-full rounded-2xl border-2">
                 <Image
-                  src="/sources/join.svg"
+                  src="/sources/lb_01.png"
                   alt=""
                   fill
-                  style={{ objectFit: "cover" }}
+                  style={{ objectFit: "contain", borderRadius: "16px" }}
                 />
               </div>
-
-              <p className="mt-8 text-base">
-                ハッカソンに参加した際に開発したプロダクトです。４人でチームを組み、開発期間は２日のみでした。
-              </p>
             </div>
-            <div>
-              <div className="relative mx-auto aspect-[511.56264/532.44842] w-[120px]">
+          </BoardInner>,
+          <BoardInner key="slide2">
+            <div className="h-full">
+              <div className="relative h-full w-full rounded-2xl border-2">
                 <Image
-                  src="/sources/responsive.svg"
+                  src="/sources/lb_02.png"
                   alt=""
                   fill
-                  style={{ objectFit: "cover" }}
+                  style={{ objectFit: "contain", borderRadius: "16px" }}
                 />
               </div>
-
-              <p className="mt-8 text-base">
-                音楽素材を投稿できるサービスです。SNSになっているので、音楽コミュニティを作ることができます。
-              </p>
             </div>
-            <div>
-              <div className="relative mx-auto aspect-[511.56264/532.44842] w-[120px]">
+          </BoardInner>,
+          <BoardInner key="slide3">
+            <div className="h-full">
+              <div className="relative h-full w-full rounded-2xl">
+                <Theme className="relative z-10 mx-5 mt-1">
+                  <Button variant="solid">
+                    <Link
+                      href={
+                        "https://www.canva.com/design/DAGKOk31r2k/gbmg70BCkbGx_oh07MaiGw/edit?utm_content=DAGKOk31r2k&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+                      }
+                      target="blank"
+                      className="flex items-center gap-2"
+                    >
+                      Canva
+                      <TbPlayerTrackNextFilled />
+                    </Link>
+                  </Button>
+                </Theme>
                 <Image
-                  src="/sources/cat.svg"
+                  src="/sources/lb_03.png"
                   alt=""
                   fill
-                  style={{ objectFit: "cover" }}
+                  style={{ objectFit: "contain", borderRadius: "16px" }}
                 />
               </div>
-
-              <p className="mt-8 text-base">
-                技術スタックは、Next.js, React, Typescript, Firebase, Vercel, 。
-              </p>
             </div>
+          </BoardInner>,
 
-            <Link
-              href={"https://www.smapocke.app/"}
-              className="absolute bottom-5 border-b border-black hover:border-gray-500 hover:text-gray-500"
-              target="blank"
-            >
-              Go to Smart Pocket →
-            </Link>
-          </div>
-        </div>,
-      ]}
-    />
+          <BoardInner key="slide4">
+            <CardLayout data={feature_data} />
+          </BoardInner>,
+          <BoardInner key="slide5">
+            <CardLayout data={data_tech} />
+          </BoardInner>,
+        ]}
+      />
+    </Board>
   );
 };

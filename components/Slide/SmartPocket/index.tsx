@@ -124,14 +124,10 @@ export const SmartPocket: FC = () => {
             </div>
           </BoardInner>,
           <BoardInner key="slide3">
-            <Theme>
-              <CardLayout data={data_3} />
-            </Theme>
+            <CardLayout data={data_3} />
           </BoardInner>,
           <BoardInner key="slide4">
-            <Theme>
-              <CardLayout data={data_4} />
-            </Theme>
+            <CardLayout data={data_4} />
           </BoardInner>,
         ]}
       />
