@@ -63,15 +63,11 @@ export const Modal = () => {
       <Dialog.Portal>
         <Dialog.Overlay className="data-[state=open]:animate-overlayShow fixed inset-0 bg-black/50" />
         <Dialog.Content className="data-[state=open]:animate-contentShow fixed left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] focus:outline-none">
-          <div className="mx-auto flex h-[500px] w-[700px] items-center justify-center rounded-3xl bg-gradient-to-r from-cyan-500 to-blue-500">
-            <div className="h-[485px] w-[685px] overflow-hidden rounded-2xl bg-white p-2">
-              {projects.map((project) => (
-                <div key={project.id}>
-                  {selected === project.id && project.compornent}
-                </div>
-              ))}
+          {projects.map((project) => (
+            <div key={project.id}>
+              {selected === project.id && project.compornent}
             </div>
-          </div>
+          ))}
         </Dialog.Content>
       </Dialog.Portal>
     </Dialog.Root>
