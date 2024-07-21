@@ -37,6 +37,11 @@ p {
   --color-background: var(--my-brand-color);
 }
 
+.swiper-button-prev,
+.swiper-button-next {
+  color: #fff;
+}
+
 .bluer {
   background: rgba(255, 255, 255, 0.85);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);

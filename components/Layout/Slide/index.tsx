@@ -1,5 +1,5 @@
 import { FC, ReactNode, useState } from "react";
-import { A11y, Pagination } from "swiper/modules";
+import { A11y, Pagination, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import "swiper/css/navigation";
 import { Button } from "@radix-ui/themes";
@@ -20,13 +20,14 @@ export const Slide: FC<SlideProps> = ({ slides }) => {
     <>
       <div className="relative">
         <Swiper
-          modules={[Pagination, A11y]}
+          modules={[Pagination, A11y, Navigation]}
           spaceBetween={50}
           slidesPerView={1}
           grabCursor={true}
           centeredSlides={true}
           loop
           pagination={{ clickable: true }}
+          navigation
           onSwiper={(swiper: any) => {
             console.log("initialize swiper", swiper);
             setSwiper(swiper);
@@ -40,7 +41,7 @@ export const Slide: FC<SlideProps> = ({ slides }) => {
             </SwiperSlide>
           ))}
         </Swiper>
-        {swiper && (
+        {/* {swiper && (
           <div className="absolute top-0 z-10 flex h-[469px] w-full items-center justify-between gap-5">
             <button onClick={() => swiper.slidePrev()}>
               <TbPlayerTrackPrevFilled
@@ -55,7 +56,7 @@ export const Slide: FC<SlideProps> = ({ slides }) => {
               />
             </button>
           </div>
-        )}
+        )} */}
       </div>
     </>
   );
