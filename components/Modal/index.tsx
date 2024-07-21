@@ -39,7 +39,7 @@ export const Modal = () => {
           {projects.map((project) => (
             <button
               key={project.id}
-              className={`${project.color} h-28 w-40 rounded-xl bg-white/60 shadow-lg transition-transform hover:translate-y-1`}
+              className={`${project.color} h-28 w-40 rounded-xl bg-white/60 shadow-lg transition-transform hover:-translate-y-[2px] hover:shadow-xl`}
               onClick={() => setSelected(project.id)}
             >
               <div className="flex justify-center">

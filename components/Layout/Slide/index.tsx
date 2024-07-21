@@ -42,22 +42,16 @@ export const Slide: FC<SlideProps> = ({ slides }) => {
         </Swiper>
         {swiper && (
           <div className="absolute top-0 z-10 flex h-[469px] w-full items-center justify-between gap-5">
-            <button
-              className="flex size-16 items-center justify-center rounded-full bg-black/10 hover:bg-black/30"
-              onClick={() => swiper.slidePrev()}
-            >
+            <button onClick={() => swiper.slidePrev()}>
               <TbPlayerTrackPrevFilled
-                size={35}
-                className="text-black/10 hover:text-black/30"
+                size={60}
+                className="rounded-full bg-black/10 p-3 text-black/10 hover:bg-black/30 hover:text-black/30"
               />
             </button>
-            <button
-              className="flex size-16 items-center justify-center rounded-full bg-black/10 hover:bg-black/30"
-              onClick={() => swiper.slideNext()}
-            >
+            <button onClick={() => swiper.slideNext()}>
               <TbPlayerTrackNextFilled
-                size={35}
-                className="text-black/10 hover:text-black/30"
+                size={60}
+                className="rounded-full bg-black/10 p-3 text-black/10 hover:bg-black/30 hover:text-black/30"
               />
             </button>
           </div>
