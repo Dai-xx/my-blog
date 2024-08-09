@@ -6,13 +6,13 @@ import { Board } from "@/components/Layout/Board";
 export const Others: FC = () => {
   return (
     <>
-      <p className="mx-12">趣味で作成したことがある3Dモデリングと写真。</p>
+      {/* <p className="mx-12">趣味で作成したことがある3Dモデリングと写真。</p> */}
       <Slide
         slides={[
           <div key="slide1">
             {/* 1つ目のスライドの内容 */}
 
-            <div className="relative w-[50%] aspect-[390/844]">
+            <div className="relative aspect-[390/844] w-[50%]">
               <Image
                 src="/sources/AT-AT01.png"
                 alt=""
@@ -22,7 +22,7 @@ export const Others: FC = () => {
             </div>
           </div>,
           <div key="slide2">
-            <div className="relative w-[50%] aspect-[390/844]">
+            <div className="relative aspect-[390/844] w-[50%]">
               <Image
                 src="/sources/power_house.png"
                 alt=""
@@ -32,7 +32,7 @@ export const Others: FC = () => {
             </div>
           </div>,
           <div key="slide3">
-            <div className="relative w-[50%] aspect-[390/844]">
+            <div className="relative aspect-[390/844] w-[50%]">
               <Image
                 src="/sources/nhao.jpeg"
                 alt=""
@@ -42,7 +42,7 @@ export const Others: FC = () => {
             </div>
           </div>,
           <div key="slide3">
-            <div className="relative w-[50%] aspect-[390/844]">
+            <div className="relative aspect-[390/844] w-[50%]">
               <Image
                 src="/sources/ajisai.JPG"
                 alt=""

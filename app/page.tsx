@@ -7,13 +7,15 @@ import { FaTrophy } from "react-icons/fa";
 
 import "swiper/css/bundle";
 import Loading from "./loading";
-import { useInView } from "react-intersection-observer";
-import { TypeTitle } from "@/components/TypeTitle";
-import { Header } from "@/components/Header";
-import { SmartPocket } from "@/components/Slide/SmartPocket";
-import { Dayshare } from "@/components/Slide/Dayshare";
-import { Others } from "@/components/Slide/Others";
-import { LECBLO } from "@/components/Slide/LECBLO";
+import { Modal } from "@/components/Modal";
+import "@radix-ui/themes/styles.css";
+import { GallerySlide } from "@/components/Layout/GallerySlide";
+import { NFT } from "@/components/Slide/NFT";
+import "@radix-ui/themes/styles.css";
+import { Avatar, Card, Inset, Text, Theme } from "@radix-ui/themes";
+import Image from "next/image";
+import { SkilBox } from "@/components/SkilBox";
+import { IMG } from "@/components/IMG";
 
 export default function Home() {
   const [showText, setShowText] = useState(false);
@@ -31,87 +33,116 @@ export default function Home() {
 
   if (!showText)
     return (
-      <div className="absolute top-1/2 left-1/2 -translate-x-[50%] -translate-y-[50%]">
+      <div className="absolute left-1/2 top-1/2 -translate-x-[50%] -translate-y-[50%]">
         <Loading />
       </div>
     );
 
+  const data = [
+    "/Logos/solidity.svg",
+    "/Logos/Go-Logo.png",
+    "/Logos/c.png",
+    "/Logos/Hardhat.png",
+  ];
+
+  const front = [
+    "/Logos/ts-logo-128.png",
+    "/Logos/react.svg",
+    "/Logos/nextjs.png",
+    "/Logos/html.png",
+    "/Logos/tailwindcss.png",
+    "/Logos/firebase.png",
+  ];
+
+  const blockchain = ["/Logos/solidity.svg", "/Logos/Hardhat.png"];
+
+  const univ = ["/Logos/c.png", "/Logos/r.png"];
+
   return (
-    <main className="">
-      {/* <motion.div style={{ opacity }} className="z-50"></motion.div> */}
-      <Header />
+    <Theme accentColor="blue">
+      <main className="h-screen w-full bg-gradient-to-r from-[#e0eaf3] to-[#cfdef3]">
+        <div className="mx-auto flex max-w-screen-xl gap-20 px-5 py-10">
+          {/* <Header /> */}
 
-      <header className="bg-black fixed top-0 w-full h-screen overflow-hidden">
+          {/* <header className="fixed top-0 h-screen w-full overflow-hidden">
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 4 }}
-          style={{
-            backgroundImage: 'url("/sources/blue.jpg")',
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            height: "100vh",
-            display: "relative",
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 8 }}
+        style={{
+          backgroundImage: 'url("/sources/blue.jpg")',
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          height: "100vh",
+          display: "relative",
           }}
-        >
+          >
           {showText && (
-            <h1 className="text-[280px] font-semibold absolute bottom-10">
-              <Typewriter
-                words={["Hello", "Hello, world!"]}
-                loop={1}
-                cursor
-                cursorStyle="_"
-                typeSpeed={70}
-                deleteSpeed={50}
-                delaySpeed={1000}
-              />
+            <h1 className="absolute bottom-1/2 text-[100px] font-extrabold md:bottom-10 md:text-[280px] md:font-semibold">
+            <Typewriter
+            words={["Hello", "Hello, world!"]}
+            loop={1}
+            cursor
+            cursorStyle="_"
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={1000}
+            />
             </h1>
-          )}
-        </motion.div>
-      </header>
-      <div className="mt-[100vh] mb-[100px]">
-        <div className="bg-white z-10 relative pb-20">
-          <section className="pt-20">
-            <div>
-              <TypeTitle text="Smart Pocket" />
-              <div className="mt-4">
-                <SmartPocket />
+            )}
+            </motion.div>
+            </header> */}
+          <nav className="w-20 rounded-lg bg-gray-500/40"></nav>
+
+          <div className="grid grid-cols-2 grid-rows-2 place-items-start gap-5">
+            <div className="">
+              <h2 className="text-7xl font-black">
+                Welcome to <br />
+                My portfolio
+              </h2>
+              <div className="mt-5 flex items-end">
+                <IMG
+                  src="/NFTs/aa.jpg"
+                  className="aspect-square w-40 rounded-full"
+                />
+                <div>
+                  <h3 className="text-3xl font-semibold">Nonaka Dai</h3>
+                  <p className="font-bold">Utsunomiya University b3</p>
+                </div>
               </div>
             </div>
-          </section>
-
-          <section className=" mt-48">
-            <div>
-              <TypeTitle text="Dayshare" />
-              <div className="mt-4">
-                <Dayshare />
+            <div className="grade-bg rounded-2xl p-5">
+              <Modal />
+            </div>
+            <div className="">
+              <NFT />
+            </div>
+            <div className="">
+              <div>
+                <SkilBox data={front}>
+                  使用頻度が高い技術スタックです。
+                  <br />
+                  フルスタックで開発しています。
+                </SkilBox>
+                <div className="mt-2"></div>
+                <SkilBox data={blockchain}>
+                  ブロックチェーン関連の技術も触れます。
+                </SkilBox>
+                <div className="mt-2">
+                  <SkilBox data={["/Logos/Go-Logo.png"]}>
+                    バックエンドも絶賛勉強中です。
+                  </SkilBox>
+                </div>
+                <div className="mt-2"></div>
+                <SkilBox data={univ}>
+                  大学ではCを用いてアルゴリズムを学んでいます。
+                </SkilBox>
               </div>
             </div>
-          </section>
-
-          <section className=" mt-48">
-            <div>
-              <div className="flex">
-                <TypeTitle text="LECBLO" />
-
-                <FaTrophy size={40} color="gold" />
-              </div>
-              <div className="mt-4">
-                <LECBLO />
-              </div>
-            </div>
-          </section>
-
-          <section className="pt-48">
-            <div>
-              <TypeTitle text="Others" />
-              <div className="mt-4">
-                <Others />
-              </div>
-            </div>
-          </section>
+            <div></div>
+          </div>
         </div>
-      </div>
-    </main>
+      </main>
+    </Theme>
   );
 }

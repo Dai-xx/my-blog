@@ -16,9 +16,9 @@ export const TypeTitle: React.FC<Prop> = ({ text }) => {
   return (
     <div ref={ref}>
       {inView && (
-        <div className="flex mx-12 gap-5">
+        <div className="mx-4 flex gap-5 md:mx-12">
           <div className="border-l-[10px] border-gray-400"></div>
-          <h2 className="text-4xl font-semibold text-black/80">
+          <h2 className="text-2xl font-semibold text-black/80 md:text-4xl">
             <Typewriter
               words={[text]}
               cursor
