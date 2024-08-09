@@ -18,7 +18,7 @@
 
 body {
   color: black;
-  background: white;
+  background-image: linear-gradient(to right, #e0eaf3, #cfdef3);
 }
 
 @layer utilities {
@@ -30,4 +30,52 @@ body {
 p {
   color: hsl(210, 12%, 10%);
   font-size: 16px;
+}
+
+.radix-themes {
+  --my-brand-color: linear-gradient(to right, #10ea38, #44be62);
+  --color-background: var(--my-brand-color);
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #fff;
+}
+
+.bluer {
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(16.5px);
+  -webkit-backdrop-filter: blur(16.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.custom-bg {
+  background: linear-gradient(90deg, #f7f7f7 0%, #f7f7f7 100%);
+}
+
+.grade-bg {
+  background-color: hsla(198, 84%, 52%, 0.83);
+  background-image: radial-gradient(
+      at 40% 20%,
+      hsla(28, 100%, 74%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 80% 0%, hsla(189, 100%, 56%, 1) 0px, transparent 50%),
+    radial-gradient(at 0% 50%, hsla(355, 100%, 93%, 1) 0px, transparent 50%),
+    radial-gradient(at 81% 44%, hsla(340, 100%, 76%, 1) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, hsla(22, 100%, 77%, 1) 0px, transparent 50%);
+}
+
+.orange-grade {
+  background-color: hsla(30, 72%, 50%, 1);
+  background-image: radial-gradient(
+      at 38% 22%,
+      hsla(31, 69%, 70%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 88% 80%, hsla(25, 70%, 69%, 0.58) 0px, transparent 50%),
+    radial-gradient(at 20% 53%, hsla(28, 74%, 70%, 0.23) 0px, transparent 50%),
+    radial-gradient(at 99% 97%, hsla(70, 95%, 70%, 1) 0px, transparent 50%);
 }
