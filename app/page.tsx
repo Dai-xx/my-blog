@@ -23,20 +23,20 @@ export default function Home() {
 
   const opacity = useTransform(scrollY, [0, 2000], [0, 1]);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowText(true);
-    }, 1500); // 2.5秒後に表示
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     setShowText(true);
+  //   }, 1500); // 2.5秒後に表示
 
-    return () => clearTimeout(timer); // クリーンアップタイマー
-  }, []);
+  //   return () => clearTimeout(timer); // クリーンアップタイマー
+  // }, []);
 
-  if (!showText)
-    return (
-      <div className="absolute left-1/2 top-1/2 -translate-x-[50%] -translate-y-[50%]">
-        <Loading />
-      </div>
-    );
+  // if (!showText)
+  //   return (
+  //     <div className="absolute left-1/2 top-1/2 -translate-x-[50%] -translate-y-[50%]">
+  //       <Loading />
+  //     </div>
+  //   );
 
   const data = [
     "/Logos/solidity.svg",
